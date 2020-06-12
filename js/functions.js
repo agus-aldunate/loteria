@@ -1,7 +1,4 @@
-function hfindex(){
-    $("#header").load("header.html"); 
-    $("#footer").load("footer.html"); 
-  };
+
 
 const init = () => {
 	const button = document.querySelector("#go");
