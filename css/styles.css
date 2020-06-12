@@ -23,10 +23,10 @@
 	border-radius: 4px;
 	cursor: pointer;
 	box-shadow: none;
-	border: 2px solid #6b425d;
+	border: 2px solid rgb(107, 66, 93);
 	outline: none;
 	background-color: transparent;
-	color: #6b425d;
+	color: rgb(107, 66, 93);
 	opacity: 1;
 	visibility: visible;
 	margin: 10px;
@@ -38,7 +38,7 @@
   }
   input[type="button"]:hover {
 	background-color: rgb(172, 169, 169);
-	color: #3d3d3d;
+	color: rgb(61, 61, 61);
   }
   input[type="button"].hidden {
 	opacity: 0;
