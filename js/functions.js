@@ -16,7 +16,7 @@ const init1 = () => {
 
 				switch (true) {
 					case number1 < 10:
-						colour1 = "#FFFFFF";
+						colour1 = "#5e5757";
 						break;
 					case number1 < 20:
 						colour1 = "rgba(255,0,0,0.5)";
@@ -87,7 +87,7 @@ const init = () => {
 
 				switch (true) {
 					case number < 10:
-						colour = "#FFFFFF";
+						colour = "#5e5757";
 						break;
 					case number < 20:
 						colour = "rgba(255,0,0,0.5)";
