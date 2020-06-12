@@ -4,7 +4,7 @@ const init = () => {
 	const button = document.querySelector("#go");
 	const balls = document.querySelectorAll(".ball");
     let numbers = [];
-    
+	
 	//Poner los numeros del 1 al 49
 	for (i = 1; i < 50; i++) {
 		numbers = [...numbers, i];
