@@ -28,16 +28,16 @@ const init = () => {
 						colour = "#FFFFFF";
 						break;
 					case number < 20:
-						colour = "#2EAFFD";
+						colour = "rgba(255,0,0,0.5)";
 						break;
 					case number < 30:
-						colour = "#EA6CE9";
+						colour = "rgba(0,0,255,0.5)";
 						break;
 					case number < 40:
-						colour = "#6DCB56";
+						colour = "rgba(255,60,119,0.5)";
 						break;
 					case number < 50:
-						colour = "#F3EF80";
+						colour = "#6b425d";
 						break;
 				}
 
