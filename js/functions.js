@@ -14,7 +14,7 @@ const init = () => {
 		let lotto = [];
 
 		//Fill lotto array with 6 unique numbers
-		for (let i = 0; i < 50; i++) {
+		for (let i = 0; i < 49; i++) {
 			const number = numbers[Math.floor(Math.random() * numbers.length)];
 			const numberExists = lotto.find(o => o.number === number);
 
