@@ -19,6 +19,9 @@
   }
   
   input[type="button"] {
+	text-align: center;
+	padding: 14px 16px;
+	float: left;
 	display: inline-block;
 	border-radius: 4px;
 	cursor: pointer;
@@ -116,6 +119,10 @@
 	   -moz-user-select: none;
 		-ms-user-select: none;
 			user-select: none;
+  }
+
+  .topnav {
+	overflow: hidden;
   }
   
   @-webkit-keyframes drop {
