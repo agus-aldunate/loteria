@@ -22,7 +22,7 @@
 	text-align: center;
 	padding: 14px 16px;
 	float: left;
-	display: inline-block;
+	display: block;
 	border-radius: 4px;
 	cursor: pointer;
 	box-shadow: none;
@@ -70,7 +70,7 @@
 	flex-wrap: wrap;
   }
   .container #wrapper .ball:not(:first-of-type) {
-	margin-left: 1rem;
+	margin-left: 1mm;
   }
   .container #wrapper .ball {
 	display: -webkit-box;
