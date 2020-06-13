@@ -124,6 +124,21 @@
   .topnav {
 	overflow: hidden;
   }
+
+  button {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+			align-items: center;
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #666;
+	border-radius: 50%;
+	font-size: 1.75rem;
+}
   
   @-webkit-keyframes drop {
 	0% {
