@@ -51,10 +51,6 @@
   .container {
 	display: -webkit-box;
 	display: flex;
-	-webkit-box-pack: center;
-			justify-content: center;
-	-webkit-box-align: center;
-			align-items: center;
 	position: relative;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -206,3 +202,62 @@
 		position: absolute; left: 5px; top: 5px;
 		color: rgba(255,0,0,0.5);   
 	}
+
+	  .container #wrapper1 {
+		display: -webkit-box;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row!important;
+	  }
+	  .container #wrapper1 .ball1:not(:first-of-type) {
+		margin-left: 1mm;
+	  }
+	  .container #wrapper1 .ball1 {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-pack: center;
+				justify-content: center;
+		-webkit-box-align: center;
+				align-items: center;
+		width: 70px;
+		height: 70px;
+		border-radius: 75%;
+		border: 1px solid #333;
+		font-size: 1.75rem;
+		color: #333;
+		margin-top: 30px;
+		opacity: 0;
+	  }
+	  .container #wrapper1 .ball1.show1 {
+		opacity: 1;
+		-webkit-animation: drop 0.5s ease-in, grow 0.4s 3.5s;
+				animation: drop 0.5s ease-in, grow 0.4s 3.5s;
+		-webkit-transition: opacity 0.4s, -webkit-transform 0.3s;
+		transition: opacity 0.4s, -webkit-transform 0.3s;
+		transition: opacity 0.4s, transform 0.3s;
+		transition: opacity 0.4s, transform 0.3s, -webkit-transform 0.3s;
+	  }
+	  .container #wrapper1 .ball1.show1:hover {
+		-webkit-transform: scale3d(1.3, 1.3, 1);
+				transform: scale3d(1.3, 1.3, 1);
+	  }
+	  .container #wrapper1 .ball1 .numWrapper1 {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-pack: center;
+				justify-content: center;
+		-webkit-box-align: center;
+				align-items: center;
+		background-color: #fff;
+		width: 50px;
+		height: 50px;
+		border: 1px solid #666;
+		border-radius: 50%;
+	  }
+	  .container #wrapper1 .ball1 .numWrapper1 > span {
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+			-ms-user-select: none;
+				user-select: none;
+	  }
+	

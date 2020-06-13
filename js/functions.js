@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const init = () => {
 	const button = document.querySelector("#go");
-	const balls = document.querySelectorAll(".ball");
+	const balls = document.querySelectorAll(".ball1");
     let numbers = [];
 	
 	//Poner los numeros del 1 al 49
@@ -77,7 +77,7 @@ const init = () => {
 		let lotto = [];
 
 		//Fill lotto array with 6 unique numbers
-		for (let i = 0; i < 49; i++) {
+		for (let i = 0; i < 6; i++) {
 			const number = numbers[Math.floor(Math.random() * numbers.length)];
 			const numberExists = lotto.find(o => o.number === number);
 
@@ -115,12 +115,12 @@ const init = () => {
 
 //Display 6 numbers with correct colours from lotto and colours array
 const displayResult = (lotto, balls) => {
-	for (let i = 0; i < balls.length; i++) {
-		balls[i].classList.remove("show");
+	for (let i = 0; i < 6; i++) {
+		balls[i].classList.remove("show1");
 		balls[i].style.backgroundColor = lotto[i].colour;
 		balls[i].querySelector("span").innerHTML = lotto[i].number;
 		setTimeout(() => {
-			balls[i].classList.add("show");
+			balls[i].classList.add("show1");
 		}, 50 * i);
 	}
 	
