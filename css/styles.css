@@ -208,6 +208,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row!important;
+		-webkit-box-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+			align-items: center;
 	  }
 	  .container #wrapper1 .ball1:not(:first-of-type) {
 		margin-left: 1mm;
