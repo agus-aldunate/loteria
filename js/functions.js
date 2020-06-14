@@ -134,3 +134,14 @@ const displayResult = (lotto, balls) => {
 document.addEventListener("DOMContentLoaded", () => {
 	init();
 });
+
+
+var x=0;
+ var bolillas=[];
+function agregar(){
+	if (x<6){
+		bolillas.push(document.getElementById("span"));
+		x++;
+
+	}
+}
