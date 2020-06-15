@@ -150,8 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const init2 = () => {
 	const button2 = document.querySelector("#mostrar");
-	const balls2 = document.querySelectorAll(".ball1");
-	const button2 = document.querySelector("#next");
 	const balls2 = document.querySelectorAll(".ball2");
 	
 	
@@ -191,18 +189,13 @@ const init2 = () => {
 	});
 	const displayResult2 = (lotto2, balls2) => {
 		for (let i = 0; i < balls2.length; i++) {
-			balls2[i].classList.remove("show1");
-			balls2[i].style.backgroundColor = lotto2[i].colour2;
-			balls2[i].querySelector("span").innerHTML = lotto2[i].number2;
-			setTimeout(() => {
-				balls2[i].classList.add("show1");
 			balls2[i].classList.remove("show2");
 			balls2[i].style.backgroundColor = lotto2[i].colour2;
 			balls2[i].querySelector("span").innerHTML = lotto2[i].number2;
 			setTimeout(() => {
 				balls2[i].classList.add("show2");
 			}, 50 * i);
-		}
+		};
 		
 		const button2 = document.querySelector("#mostrar");
 		setTimeout(() => {
