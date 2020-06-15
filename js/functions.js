@@ -65,6 +65,9 @@ const displayResult1 = (lotto1, balls1) => {
 
 document.addEventListener("DOMContentLoaded", () => {
 	init();
+	init1();
+	init2();
+	
 });
 
 
@@ -81,7 +84,7 @@ const init1 = () => {
 	}
 	
 	button.addEventListener("click", () => {
-		titulo.classList.add("mostrarp");
+		titulo.classList.add("mostrarp1");
 		borde.classList.add("border");
 		button.classList.add("hidden");
 		let lotto = [];
@@ -141,22 +144,20 @@ const displayResult = (lotto, balls) => {
 	
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-	init1();
-});
-
 
 
 
 const init2 = () => {
 	const button2 = document.querySelector("#mostrar");
-	const balls2 = document.querySelectorAll(".ball1");
-	const button2 = document.querySelector("#next");
+	const titulo2 = document.querySelector("#titulo1");
+	const borde2 = document.querySelector("#wrapper2");
 	const balls2 = document.querySelectorAll(".ball2");
 	
 	
 	button2.addEventListener("click", () => {
 		
+		titulo2.classList.add("mostrarp2");
+		borde2.classList.add("border");
 		let lotto2 = [];
 
 		//Fill lotto array with 6 unique numbers
@@ -191,29 +192,19 @@ const init2 = () => {
 	});
 	const displayResult2 = (lotto2, balls2) => {
 		for (let i = 0; i < balls2.length; i++) {
-			balls2[i].classList.remove("show1");
-			balls2[i].style.backgroundColor = lotto2[i].colour2;
-			balls2[i].querySelector("span").innerHTML = lotto2[i].number2;
-			setTimeout(() => {
-				balls2[i].classList.add("show1");
 			balls2[i].classList.remove("show2");
 			balls2[i].style.backgroundColor = lotto2[i].colour2;
 			balls2[i].querySelector("span").innerHTML = lotto2[i].number2;
 			setTimeout(() => {
 				balls2[i].classList.add("show2");
 			}, 50 * i);
-		}
-		
+			}
 		const button2 = document.querySelector("#mostrar");
 		setTimeout(() => {
 			
 		}, 650);
 		
 	};
-	
-	document.addEventListener("DOMContentLoaded", () => {
-		init2();
-	});
 };
 
 
