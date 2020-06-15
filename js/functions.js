@@ -197,6 +197,7 @@ const init2 = () => {
 		}
 		displayResult2(lotto2, balls2);
 	});
+};
 	const displayResult2 = (lotto2, balls2) => {
 		for (let i = 0; i < balls2.length; i++) {
 			balls2[i].classList.remove("show2");
@@ -207,7 +208,6 @@ const init2 = () => {
 			}, 50 * i);
 		};
 		
-			}
 		const button2 = document.querySelector("#mostrar");
 		setTimeout(() => {
 			
