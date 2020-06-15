@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	init1();
 });
 
+<<<<<<< HEAD
 const init2 = () => {
 	const button2 = document.querySelector("#next");
 	const balls2 = document.querySelectorAll(".ball");
@@ -204,3 +205,15 @@ const init2 = () => {
 	});
 };
 
+=======
+
+var x=0;
+ var bolillas=[];
+function agregar(){
+	if (x<6){
+		bolillas.push(document.getElementById("span"));
+		x++;
+
+	}
+}
+>>>>>>> 9ad84b8dabd6e429061e285f5af8e6e6915f9cad
