@@ -66,7 +66,6 @@ const displayResult1 = (lotto1, balls1) => {
 document.addEventListener("DOMContentLoaded", () => {
 	init();
 	init1();
-	init2();
 	init3();
 	
 });
@@ -153,71 +152,7 @@ const displayResult = (lotto, balls) => {
 };
 
 
-
-
-const init2 = () => {
-	const button2 = document.querySelector("#mostrar");
-	const titulo2 = document.querySelector("#titulo1");
-	const borde2 = document.querySelector("#wrapper2");
-	const balls2 = document.querySelectorAll(".ball2");
-	
-	
-	button2.addEventListener("click", () => {
-		
-		titulo2.classList.add("mostrarp2");
-		borde2.classList.add("border");
-		let lotto2 = [];
-
-		//Fill lotto array with 6 unique numbers
-		for (let i = 0; i < 6; i++) {
-			const number2 = i+1;
-
-				//Set colour based on the number range
-				let colour2 = "";
-
-				switch (true) {
-					case number2 < 10:
-						colour2 = "#5e5757";
-						break;
-					case number2 < 20:
-						colour2 = "rgba(255,0,0,0.5)";
-						break;
-					case number2 < 30:
-						colour2 = "rgba(0,0,255,0.5)";
-						break;
-					case number2 < 40:
-						colour2 = "rgba(255,60,119,0.5)";
-						break;
-					case number2 < 50:
-						colour2 = "#6b425d";
-						break;
-				}
-
-				// fill lotto array with number and colour
-				lotto2 = [...lotto2, {number2, colour2}];
-		}
-		displayResult2(lotto2, balls2);
-	});
-};
-	const displayResult2 = (lotto2, balls2) => {
-		for (let i = 0; i < balls2.length; i++) {
-			balls2[i].classList.remove("show2");
-			balls2[i].style.backgroundColor = lotto2[i].colour2;
-			balls2[i].querySelector("span").innerHTML = lotto2[i].number2;
-			setTimeout(() => {
-				balls2[i].classList.add("show2");
-			}, 50 * i);
-		};
-		
-		const button2 = document.querySelector("#mostrar");
-		setTimeout(() => {
-			
-		}, 650);
-		
-	};
-
 	const init3= () => {
-		const button3 = document.querySelector("#bolitas");
 		const balls3 = document.querySelectorAll(".ball");
 		const titulo2 = document.querySelector("#titulo1");
 		const borde2 = document.querySelector("#wrapper2");
@@ -265,10 +200,5 @@ const init2 = () => {
 				setTimeout(() => {
 					balls4[i].classList.add("show2");
 				}, 50 * i);
-			
-			const button3 = document.querySelector("#bolitas");
-			setTimeout(() => {
-				
-			}, 650);
 			
 		};
