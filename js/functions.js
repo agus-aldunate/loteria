@@ -205,6 +205,8 @@ const init2 = () => {
 			setTimeout(() => {
 				balls2[i].classList.add("show2");
 			}, 50 * i);
+		};
+		
 			}
 		const button2 = document.querySelector("#mostrar");
 		setTimeout(() => {
@@ -212,7 +214,7 @@ const init2 = () => {
 		}, 650);
 		
 	};
-};
+
 
 
 var x=0;
