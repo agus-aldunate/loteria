@@ -216,6 +216,7 @@
 		color: rgb(107, 66, 93);
 		margin-top: 30px;
 		opacity: 1;
+		visibility: visible;
 	}
 
 	h2{
