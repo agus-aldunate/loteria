@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	init();
 	init1();
 	init2();
+	init3();
 	
 });
 
@@ -215,14 +216,59 @@ const init2 = () => {
 		
 	};
 
+	const init3= () => {
+		const button3 = document.querySelector("#bolitas");
+		const balls3 = document.querySelectorAll(".ball");
+		const titulo2 = document.querySelector("#titulo1");
+		const borde2 = document.querySelector("#wrapper2");
+		const balls4 = document.querySelectorAll(".ball2");
+		var i =0;
 
+			for(let index =0; index < balls3.length; index++ ){
+				balls3[index].addEventListener("click", function() {
+				if( i < 6){
+					if(i==0){
+						titulo2.classList.add("mostrarp2");
+						borde2.classList.add("border");
+					}
+					balls3[index].classList.add("borrar");
+					const number3 = index + 1;
+					let colour3 = "";
 
-var x=0;
- var bolillas=[];
-function agregar(){
-	if (x<6){
-		bolillas.push(document.getElementById("span"));
-		x++;
-
+						switch (true) {
+							case number3 < 10:
+								colour3 = "#5e5757";
+								break;
+							case number3 < 20:
+								colour3 = "rgba(255,0,0,0.5)";
+								break;
+							case number3 < 30:
+								colour3 = "rgba(0,0,255,0.5)";
+								break;
+							case number3 < 40:
+								colour3 = "rgba(255,60,119,0.5)";
+								break;
+							case number3 < 50:
+								colour3 = "#6b425d";
+								break;
+						}	
+				displayResult3(number3, colour3, balls4, i);
+				i ++;
+			}
+		});
 	}
-}
+	};
+		const displayResult3 = (number3, colour3, balls4, i) => {
+				balls4[i].classList.remove("show2");
+				balls4[i].style.backgroundColor = colour3;
+				balls4[i].querySelector("span").innerHTML = number3;
+				setTimeout(() => {
+					balls4[i].classList.add("show2");
+				}, 50 * i);
+			
+			const button3 = document.querySelector("#bolitas");
+			setTimeout(() => {
+				
+			}, 650);
+			
+		};

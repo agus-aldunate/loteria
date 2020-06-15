@@ -82,6 +82,9 @@
 	margin-top: 10px;
 	opacity: 0;
   }
+  .container #wrapper .ball.borrar {
+	  visibility: hidden;
+  }
   .container #wrapper .ball.show {
 	opacity: 1;
 	-webkit-animation: drop 0.5s ease-in, grow 0.4s 3.5s;
