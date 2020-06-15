@@ -143,17 +143,20 @@ document.addEventListener("DOMContentLoaded", () => {
 	init1();
 });
 
+
+
+
 const init2 = () => {
-	const button2 = document.querySelector("#next");
-	const balls2 = document.querySelectorAll(".ball");
+	const button2 = document.querySelector("#mostrar");
+	const balls2 = document.querySelectorAll(".ball1");
 	
 	
 	button2.addEventListener("click", () => {
-		button2.classList.add("hidden");
+		
 		let lotto2 = [];
 
 		//Fill lotto array with 6 unique numbers
-		for (let i = 0; i < 49; i++) {
+		for (let i = 0; i < 6; i++) {
 			const number2 = i+1;
 
 				//Set colour based on the number range
@@ -184,17 +187,17 @@ const init2 = () => {
 	});
 	const displayResult2 = (lotto2, balls2) => {
 		for (let i = 0; i < balls2.length; i++) {
-			balls2[i].classList.remove("show");
+			balls2[i].classList.remove("show1");
 			balls2[i].style.backgroundColor = lotto2[i].colour2;
 			balls2[i].querySelector("span").innerHTML = lotto2[i].number2;
 			setTimeout(() => {
-				balls2[i].classList.add("show");
+				balls2[i].classList.add("show1");
 			}, 50 * i);
 		}
 		
-		const button2 = document.querySelector("#next");
+		const button2 = document.querySelector("#mostrar");
 		setTimeout(() => {
-			button2.classList.remove("hidden");
+			
 		}, 650);
 		
 	};
