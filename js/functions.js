@@ -93,7 +93,6 @@ const init1 = () => {
 		for (let i = 0; i < 6; i++) {
 			const number = numbers[Math.floor(Math.random() * numbers.length)];
 			const numberExists = lotto.find(o => o.number === number);
-
 			if (!numberExists) {
 				//Set colour based on the number range
 				let colour = "";
@@ -115,13 +114,21 @@ const init1 = () => {
 						colour = "#6b425d";
 						break;
 				}
-
-				// fill lotto array with number and colour
 				lotto = [...lotto, {number, colour}];
 			} else {
 				i--;
 			}
 		}
+		lotto.sort(function (a, b) {
+			if (a.number > b.number) {
+			  return 1;
+			}
+			if (a.number < b.number) {
+			  return -1;
+			}
+			// a must be equal to b
+			return 0;
+		  });
 		displayResult(lotto, balls);
 	});
 };
