@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const init1 = () => {
 	const button = document.querySelector("#go");
+	const titulo = document.querySelector("#titulo");
 	const borde = document.querySelector("#wrapper1");
 	const balls = document.querySelectorAll(".ball1");
     let numbers = [];
@@ -80,6 +81,7 @@ const init1 = () => {
 	}
 	
 	button.addEventListener("click", () => {
+		titulo.classList.add("mostrarp");
 		borde.classList.add("border");
 		button.classList.add("hidden");
 		let lotto = [];
@@ -149,6 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const init2 = () => {
 	const button2 = document.querySelector("#mostrar");
 	const balls2 = document.querySelectorAll(".ball1");
+	const button2 = document.querySelector("#next");
+	const balls2 = document.querySelectorAll(".ball2");
 	
 	
 	button2.addEventListener("click", () => {
@@ -192,6 +196,11 @@ const init2 = () => {
 			balls2[i].querySelector("span").innerHTML = lotto2[i].number2;
 			setTimeout(() => {
 				balls2[i].classList.add("show1");
+			balls2[i].classList.remove("show2");
+			balls2[i].style.backgroundColor = lotto2[i].colour2;
+			balls2[i].querySelector("span").innerHTML = lotto2[i].number2;
+			setTimeout(() => {
+				balls2[i].classList.add("show2");
 			}, 50 * i);
 		}
 		

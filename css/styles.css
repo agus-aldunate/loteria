@@ -208,6 +208,17 @@
 		color: rgba(255,0,0,0.5);  
 	}
 
+	p{
+		visibility: hidden;
+	}
+
+	.mostrarp{
+		color: rgb(107, 66, 93);
+		margin-top: 30px;
+		opacity: 1;
+		visibility: visible;
+	}
+
 	h2{
 		visibility: hidden;
 	}
@@ -299,7 +310,10 @@
 
 	  .border{
 		border: 5px solid rgb(107, 66, 93);
-		margin-top: 30px;
+		margin-top: 10px;
+		-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	font-family: 'Open Sans', sans-serif;
 	  }
 
 	  .container #wrapper2 {
