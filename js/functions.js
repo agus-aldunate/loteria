@@ -1,4 +1,4 @@
-const init1 = () => {
+const init = () => {
 	const button1 = document.querySelector("#numbers");
 	const balls1 = document.querySelectorAll(".ball");
 	
@@ -41,12 +41,18 @@ const init1 = () => {
 
 //Display 6 numbers with correct colours from lotto and colours array
 const displayResult1 = (lotto1, balls1) => {
+	const puntos1 = document.querySelector("#puntos");
+	const rondas1 = document.querySelector("#rondas");
+	const aciertos1 = document.querySelector("#aciertos");
 	for (let i = 0; i < balls1.length; i++) {
 		balls1[i].classList.remove("show");
 		balls1[i].style.backgroundColor = lotto1[i].colour1;
 		balls1[i].querySelector("span").innerHTML = lotto1[i].number1;
 		setTimeout(() => {
 			balls1[i].classList.add("show");
+			puntos1.classList.add("mostrar");
+			rondas1.classList.add("mostrar");
+			aciertos1.classList.add("mostrar");
 		}, 50 * i);
 	}
 	
@@ -58,12 +64,13 @@ const displayResult1 = (lotto1, balls1) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-	init1();
+	init();
 });
 
 
-const init = () => {
+const init1 = () => {
 	const button = document.querySelector("#go");
+	const borde = document.querySelector("#wrapper1");
 	const balls = document.querySelectorAll(".ball1");
     let numbers = [];
 	
@@ -73,6 +80,7 @@ const init = () => {
 	}
 	
 	button.addEventListener("click", () => {
+		borde.classList.add("border");
 		button.classList.add("hidden");
 		let lotto = [];
 
@@ -132,5 +140,67 @@ const displayResult = (lotto, balls) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-	init();
+	init1();
 });
+
+const init2 = () => {
+	const button2 = document.querySelector("#next");
+	const balls2 = document.querySelectorAll(".ball");
+	
+	
+	button2.addEventListener("click", () => {
+		button2.classList.add("hidden");
+		let lotto2 = [];
+
+		//Fill lotto array with 6 unique numbers
+		for (let i = 0; i < 49; i++) {
+			const number2 = i+1;
+
+				//Set colour based on the number range
+				let colour2 = "";
+
+				switch (true) {
+					case number2 < 10:
+						colour2 = "#5e5757";
+						break;
+					case number2 < 20:
+						colour2 = "rgba(255,0,0,0.5)";
+						break;
+					case number2 < 30:
+						colour2 = "rgba(0,0,255,0.5)";
+						break;
+					case number2 < 40:
+						colour2 = "rgba(255,60,119,0.5)";
+						break;
+					case number2 < 50:
+						colour2 = "#6b425d";
+						break;
+				}
+
+				// fill lotto array with number and colour
+				lotto2 = [...lotto2, {number2, colour2}];
+		}
+		displayResult2(lotto2, balls2);
+	});
+	const displayResult2 = (lotto2, balls2) => {
+		for (let i = 0; i < balls2.length; i++) {
+			balls2[i].classList.remove("show");
+			balls2[i].style.backgroundColor = lotto2[i].colour2;
+			balls2[i].querySelector("span").innerHTML = lotto2[i].number2;
+			setTimeout(() => {
+				balls2[i].classList.add("show");
+			}, 50 * i);
+		}
+		
+		const button2 = document.querySelector("#next");
+		setTimeout(() => {
+			button2.classList.remove("hidden");
+		}, 650);
+		
+	};
+	
+	document.addEventListener("DOMContentLoaded", () => {
+		init2();
+	});
+};
+
