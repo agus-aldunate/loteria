@@ -85,7 +85,7 @@ const displayResult1 = (lotto1, balls1) => {
 	
 	const button1 = document.querySelector("#numbers");
 	setTimeout(() => {
-		button1.classList.remove("hidden");
+		
 	}, 650);
 	
 };
