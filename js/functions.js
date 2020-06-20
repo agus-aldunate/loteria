@@ -76,7 +76,10 @@ const init1 = () => {
 	const titulo = document.querySelector("#titulo");
 	const borde = document.querySelector("#wrapper1");
 	const balls = document.querySelectorAll(".ball1");
-    let numbers = [];
+	const balls5 = document.querySelectorAll(".ball2");
+	let numbers = [];
+	var puntos=0;
+	var aciertos=0;
 	
 	//Poner los numeros del 1 al 49
 	for (i = 1; i < 50; i++) {
@@ -130,8 +133,46 @@ const init1 = () => {
 			return 0;
 		  });
 		displayResult(lotto, balls);
+			
+for(let x=0; x<balls.length; x++){
+	for (let y=0; y<balls.length; y++){
+		if(balls[x].querySelector("span").innerHTML==balls5[y].querySelector("span").innerHTML){
+			puntos=puntos+10;
+		}
+	}
+}
+
+if(puntos==10){
+	aciertos=1;
+}else if(puntos==20){
+	acertos=2;
+}else if(puntos==30){
+	aciertos==3;
+}else if(puntos==40){
+	aciertos=4;
+}else if(puntos==50){
+	aceritos=5;
+}else if(puntos==60){
+	aciertos=6;
+}else{
+	aciertos=0;
+}
+
+document.getElementById("ac").innerHTML = aciertos;
+
+if (puntos==50){
+	puntos=puntos+100;
+}else if(puntos==60){
+	puntos=puntos+1000;
+}
+document.getElementById("contenido").innerHTML = puntos;
+
+
 	});
+
+
 };
+
 
 //Display 6 numbers with correct colours from lotto and colours array
 const displayResult = (lotto, balls) => {
@@ -142,14 +183,19 @@ const displayResult = (lotto, balls) => {
 		setTimeout(() => {
 			balls[i].classList.add("show1");
 		}, 50 * i);
+
+
+	}
+
+
 	}
 	
 	const button = document.querySelector("#go");
 	setTimeout(() => {
 		button.classList.remove("hidden");
 	}, 650);
-	
-};
+
+
 
 
 	const init3= () => {
