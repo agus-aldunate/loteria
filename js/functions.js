@@ -162,31 +162,17 @@ const init1 = () => {
 			return 0;
 		  });
 		displayResult(lotto, balls);
-<<<<<<< HEAD
 			
 for(let x=0; x<balls.length; x++){
 	for (let y=0; y<balls.length; y++){
 		if(balls[x].querySelector("span").innerHTML==balls5[y].querySelector("span").innerHTML){
 			puntos=puntos+10;
+			aciertos=aciertos+1;
 		}
 	}
 }
 
-if(puntos==10){
-	aciertos=1;
-}else if(puntos==20){
-	acertos=2;
-}else if(puntos==30){
-	aciertos==3;
-}else if(puntos==40){
-	aciertos=4;
-}else if(puntos==50){
-	aceritos=5;
-}else if(puntos==60){
-	aciertos=6;
-}else{
-	aciertos=0;
-}
+
 
 document.getElementById("ac").innerHTML = aciertos;
 
@@ -198,9 +184,7 @@ if (puntos==50){
 document.getElementById("contenido").innerHTML = puntos;
 
 
-=======
 		button3.classList.remove("hidden");
->>>>>>> 8c192928c8bbd4117f400e203a4a1cd3133d2205
 	});
 
 
