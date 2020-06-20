@@ -162,7 +162,6 @@ const init1 = () => {
 			return 0;
 		  });
 		displayResult(lotto, balls);
-<<<<<<< HEAD
 			
 for(let x=0; x<balls.length; x++){
 	for (let y=0; y<balls.length; y++){
@@ -198,9 +197,7 @@ if (puntos==50){
 document.getElementById("contenido").innerHTML = puntos;
 
 
-=======
 		button3.classList.remove("hidden");
->>>>>>> 8c192928c8bbd4117f400e203a4a1cd3133d2205
 	});
 
 
