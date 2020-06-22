@@ -73,6 +73,7 @@ const displayResult1 = (lotto1, balls1) => {
 	const puntos1 = document.querySelector("#puntos");
 	const rondas1 = document.querySelector("#rondas");
 	const aciertos1 = document.querySelector("#aciertos");
+	const cantidad = document.querySelector("#cantidad");
 	for (let i = 0; i < balls1.length; i++) {
 		balls1[i].classList.remove("show");
 		balls1[i].style.backgroundColor = lotto1[i].colour1;
@@ -82,6 +83,7 @@ const displayResult1 = (lotto1, balls1) => {
 			puntos1.classList.add("mostrar");
 			rondas1.classList.add("mostrar");
 			aciertos1.classList.add("mostrar");
+			cantidad.classList.add("mostrar");
 		}, 50 * i);
 	}
 	
@@ -97,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	init1();
 	init2();
 	init3();
+	init4();
 	
 });
 
@@ -111,6 +114,7 @@ const init1 = () => {
 	let numbers = [];
 	var puntos=0;
 	var aciertos=0;
+	window.x = 0;
 	
 	//Poner los numeros del 1 al 49
 	for (i = 1; i < 50; i++) {
@@ -118,13 +122,14 @@ const init1 = () => {
 	}
 	
 	button.addEventListener("click", () => {
+		window.x = 1;
 		titulo.classList.add("mostrarp1");
 		borde.classList.add("border");
 		button.classList.add("hidden");
 		let lotto = [];
 
 		//Fill lotto array with 6 unique numbers
-		for (let i = 0; i < 6; i++) {
+		for (i = 0; i< 6; i++) {
 			const number = numbers[Math.floor(Math.random() * numbers.length)];
 			const numberExists = lotto.find(o => o.number === number);
 			if (!numberExists) {
@@ -171,6 +176,8 @@ for(let x=0; x<balls.length; x++){
 		if(balls[x].querySelector("span").innerHTML==balls5[y].querySelector("span").innerHTML){
 			puntos=puntos+10;
 			aciertos=aciertos+1;
+			balls[x].classList.add("correcto");
+			balls5[y].classList.add("correcto1");
 		}
 	}
 }
@@ -214,11 +221,6 @@ const displayResult = (lotto, balls) => {
 
 	}
 	
-	const button = document.querySelector("#go");
-	setTimeout(() => {
-		button.classList.remove("hidden");
-	}, 650);
-
 
 
 const init2 = () => {
@@ -231,8 +233,12 @@ const init2 = () => {
 	const balls1 = document.querySelectorAll(".ball");
 	const balls2 = document.querySelectorAll(".ball1");
 	const balls3 = document.querySelectorAll(".ball2");
+	var cantidad = 0;
 	
 	button1.addEventListener("click", () => {
+		window.x = 0;
+		cantidad ++;
+		document.getElementById("cantidad1").innerHTML = cantidad;
 		var puntos=0;
 		var aciertos=0;
 		window.i = 0;
@@ -247,6 +253,8 @@ const init2 = () => {
 		for(let i = 0; i < balls2.length; i++){
 			balls2[i].classList.remove("show1");
 			balls3[i].classList.remove("show2");
+			balls2[i].classList.remove("correcto");
+			balls3[i].classList.remove("correcto1");
 		}
 		for (let i = 0; i < balls1.length; i++) {
 			balls1[i].classList.remove("show");
@@ -311,6 +319,7 @@ const displayResult2 = (lotto1, balls1) => {
 		const borde2 = document.querySelector("#wrapper2");
 		const balls4 = document.querySelectorAll(".ball2");
 		window.i = 0;
+		var cantidad = 0;
 			for(let index = 0; index < balls3.length; index++ ){
 				balls3[index].addEventListener("click", function() {
 				if( window.i < 6){
@@ -357,3 +366,23 @@ const displayResult2 = (lotto1, balls1) => {
 					balls4[i].classList.add("show2");
 				}, 50 * i);
 		};
+
+	const init4= () => {
+			const button2 = document.querySelector("#go");
+			const balls3 = document.querySelectorAll(".ball");
+			const balls4 = document.querySelectorAll(".ball2");
+			window.i = 0;
+			for(let index = 0; index < balls4.length; index++ ){
+				balls4[index].addEventListener("click", function() {
+					if(window.i == index + 1){
+						button2.classList.add("hidden");
+						if(window.x == 0){
+							balls4[index].classList.remove("show2");
+							const number = balls4[index].querySelector("span").innerHTML - 1;
+							balls3[number].classList.remove("borrar");
+								window.i = index;
+						}
+				}
+				});
+			}
+		}
