@@ -286,6 +286,7 @@
 		font-size: 1.75rem;
 		color: #333;
 		opacity: 0;
+		margin-right: 15px;
 	  }
 	  .container #wrapper1 .ball1.show1 {
 		opacity: 1;
@@ -364,6 +365,7 @@
 		font-size: 1.75rem;
 		color: #333;
 		opacity: 0;
+		margin-right: 15px;
 	  }
 	  .container #wrapper2 .ball2.show2 {
 		opacity: 1;
