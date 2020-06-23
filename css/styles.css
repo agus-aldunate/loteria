@@ -216,7 +216,7 @@
 		color: rgb(107, 66, 93);
 		margin-top: 30px;
 		opacity: 1;
-		float: left;
+		float: right;
 		width: 50%;
 	}
 
@@ -263,7 +263,7 @@
 	-webkit-box-align: center;
 			align-items: center;
 			padding: 10px 25px;
-			float: left;
+			float: right;
     width: 50%;
     margin-right: auto;
     margin-left: auto;
@@ -290,8 +290,6 @@
 	  }
 	  .container #wrapper1 .ball1.show1 {
 		opacity: 1;
-		-webkit-animation: drop 0.5s ease-in;
-				animation: drop 0.5s ease-in;
 		-webkit-transition: opacity 0.4s, -webkit-transform 0.3s;
 		transition: opacity 0.4s, -webkit-transform 0.3s;
 		transition: opacity 0.4s, transform 0.3s;
@@ -342,7 +340,7 @@
 	-webkit-box-align: center;
 			align-items: center;
 			padding: 10px 25px;
-			float: right;
+			float: left;
     width: 50%;
     margin-right: auto;
     margin-left: auto;
