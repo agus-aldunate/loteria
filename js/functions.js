@@ -45,19 +45,19 @@ const init = () => {
 
 				switch (true) {
 					case number1 < 10:
-						colour1 = "#5e5757";
+						colour1 = "#d1d1d1";
 						break;
 					case number1 < 20:
-						colour1 = "rgba(255,0,0,0.5)";
+						colour1 = "#ababab";
 						break;
 					case number1 < 30:
-						colour1 = "rgba(0,0,255,0.5)";
+						colour1 = "#6b6b6b";
 						break;
 					case number1 < 40:
-						colour1 = "rgba(255,60,119,0.5)";
+						colour1 = "#545454";
 						break;
 					case number1 < 50:
-						colour1 = "#6b425d";
+						colour1 = "#000000";
 						break;
 				}
 
@@ -138,19 +138,19 @@ const init1 = () => {
 
 				switch (true) {
 					case number < 10:
-						colour = "#5e5757";
+						colour = "#d1d1d1";
 						break;
 					case number < 20:
-						colour = "rgba(255,0,0,0.5)";
+						colour = "#ababab";
 						break;
 					case number < 30:
-						colour = "rgba(0,0,255,0.5)";
+						colour = "#6b6b6b";
 						break;
 					case number < 40:
-						colour = "rgba(255,60,119,0.5)";
+						colour = "#545454";
 						break;
 					case number < 50:
-						colour = "#6b425d";
+						colour = "#000000";
 						break;
 				}
 				lotto = [...lotto, {number, colour}];
@@ -274,19 +274,19 @@ const init2 = () => {
 
 				switch (true) {
 					case number1 < 10:
-						colour1 = "#5e5757";
+						colour1 = "#d1d1d1";
 						break;
 					case number1 < 20:
-						colour1 = "rgba(255,0,0,0.5)";
+						colour1 = "#ababab";
 						break;
 					case number1 < 30:
-						colour1 = "rgba(0,0,255,0.5)";
+						colour1 = "#6b6b6b";
 						break;
 					case number1 < 40:
-						colour1 = "rgba(255,60,119,0.5)";
+						colour1 = "#545454";
 						break;
 					case number1 < 50:
-						colour1 = "#6b425d";
+						colour1 = "#000000";
 						break;
 				}
 
@@ -331,23 +331,23 @@ const displayResult2 = (lotto1, balls1) => {
 					const number3 = index + 1;
 					let colour3 = "";
 
-						switch (true) {
-							case number3 < 10:
-								colour3 = "#5e5757";
-								break;
-							case number3 < 20:
-								colour3 = "rgba(255,0,0,0.5)";
-								break;
-							case number3 < 30:
-								colour3 = "rgba(0,0,255,0.5)";
-								break;
-							case number3 < 40:
-								colour3 = "rgba(255,60,119,0.5)";
-								break;
-							case number3 < 50:
-								colour3 = "#6b425d";
-								break;
-						}
+					switch (true) {
+						case number3 < 10:
+							colour3 = "#d1d1d1";
+							break;
+						case number3 < 20:
+							colour3 = "#ababab";
+							break;
+						case number3 < 30:
+							colour3 = "#6b6b6b";
+							break;
+						case number3 < 40:
+							colour3 = "#545454";
+							break;
+						case number3 < 50:
+							colour3 = "#000000";
+							break;
+					}
 				displayResult3(number3, colour3, balls4, window.i);
 				window.i ++;
 				if(window.i == 6){
